@@ -1,0 +1,30 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
+---
+
+<Layout title="Über uns">
+  <Sectionhead>
+    <Fragment slot="title">Wir über uns</Fragment>
+    <Fragment slot="desc">Wir stellen uns vor!</Fragment>
+  </Sectionhead>
+
+  <Container>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <p class="leading-relaxed text-slate-500">
+        Nachdem ich in verschiedenen Steuerberatungskanzleien Erfahrungen sammeln konnte, habe ich im Mai 1999 die Steuerberatungskanzlei Mag. Martina Märzinger in Wels im WDZ III unter dem Motto „Let´s talk about tax“ eröffnet.
+      </p>
+      <p class="leading-relaxed text-slate-500">
+        Losgestartet mit nur einer Mitarbeiterin ist die Kanzlei rasch gewachsen und beschäftigt zur Zeit 20 Mitarbeiter/innen in den Bereichen Buchhaltung, Lohnverrechnung, Bilanzierung, steuerliche und betriebswirtschaftliche Beratung, Jungunternehmerbetreuung und Sanierungsberatung. 2005 wurde die Einzelfirma in die neu gegründete Mag. Martina Märzinger Wirtschaftstreuhand – Steuerberatung GmbH eingebracht. 
+      </p>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <Link href="/team" target="_blank" class="" style="primary" size="md" rel="noopener">Team</Link>
+        <Link href="/kooperationspartner" target="_blank" class="" style="primary" size="md" rel="noopener">Kooperationspartner</Link>
+        <Link href="/karriere" target="_blank" class="" style="primary" size="md" rel="noopener">Karriere</Link>
+      </div>
+    </div>
+  </Container>
+</Layout>

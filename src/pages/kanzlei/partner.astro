@@ -1,0 +1,65 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { Image } from "@astrojs/image/components";
+
+---
+
+<Layout title="Kooperationspartner">
+  <Sectionhead>
+    <Fragment slot="title">Kooperationspartner</Fragment>
+    <Fragment slot="desc"></Fragment>
+  </Sectionhead>
+
+  <Container>
+    
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-center text-2xl text-gray-800">
+        Stossier - Heitzinger Rechtsanwälte 
+      </h2>
+      <p class="leading-relaxed text-center text-slate-500">
+        Dr. Martin Stossier Rechtsanwalt KG<br>
+        Dr. Roland Heitzinger, Rechtsanwalt<br>
+        kanzlei@stossier.at<br>
+        www.stossier.eu<br>
+      </p>
+      <h2 class="mt-8 font-bold text-center text-2xl text-gray-800">
+        Dr. Klaus Schiller, Rechtsanwalt 
+      </h2>
+      <p class="leading-relaxed text-center text-slate-500">
+        <a href="mailto:office@kanzlei-schiller.at">office@kanzlei-schiller.at</a>
+      </p>
+      <h2 class="mt-8 font-bold text-center text-2xl text-gray-800">
+        Jungunternehmerforum Junge Wirtschaft
+      </h2>
+      <p class="leading-relaxed text-center text-slate-500">
+        <a href="https://www.jungewirtschaft.at/wels" target="_blank">www.jungewirtschaft.at/wels</a>
+      </p>
+      
+    </div>
+    <!-- <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      {
+        team.map((item) => (
+          <div class="group">
+            <div class="w-full aspect-square">
+              <Image
+                {...item.avatar}
+                format="avif"
+                alt="Team"
+                class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+              />
+            </div>
+
+            <div class="mt-4 text-center">
+              <h2 class="text-lg text-gray-800"> {item.name}</h2>
+              <h3 class="text-sm text-slate-500"> {item.title}</h3>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    -->
+  </Container>
+</Layout>

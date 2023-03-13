@@ -1,0 +1,293 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { Image } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+
+import MaerzingerImage from "@assets/team/maerzinger-m.jpg";
+import ZaunerImage from "@assets/team/zauner.jpg";
+import HauerImage from "@assets/team/hauer.jpg";
+import KrifkaImage from "@assets/team/krifka_2023.jpg";
+import SchachingerImage from "@assets/team/schachinger.jpg";
+import MMaerzingerImage from "@assets/team/maerzinger-e.jpg";
+import KlausmayerImage from "@assets/team/klausmayer.jpg";
+import HahnImage from "@assets/team/hahn-stephanie.jpg";
+import KinbergerImage from "@assets/team/christine_kinberger.jpg";
+import StipicImage from "@assets/team/stipic.jpg";
+import ManhartsgruberImage from "@assets/team/manhartsgruber-karin.jpg";
+import MarinkovicImage from "@assets/team/amanda_marinkovic.jpg";
+import SchmidtImage from "@assets/team/schmidt_s.jpg";
+import KarinaImage from "@assets/team/karina_graf.jpg";
+import MaliqiImage from "@assets/team/Kymete_Mailiqui.jpg";
+import BodurImage from "@assets/team/elvan_bodur.jpg";
+import HauserImage from "@assets/team/m_hauser.jpg";
+import HannahImage from "@assets/team/winitzky-hannah.jpg";
+import PlaceholderImage from "@assets/team/placeholder.jpg";
+
+const team = [
+  {
+    name: "Mag. Martina Märzinger-Stossier",
+    title: "Steuerberater",
+    telefon: "07242/35388",
+    email: "maerzinger@maerzinger.at",
+    avatar: {
+      src: MaerzingerImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Mag. Michaela Zauner",
+    title: "Steuerberater",
+    telefon: "07242/35388 DW 23",
+    email: "zauner@maerzinger.at",
+    avatar: {
+      src: ZaunerImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Mag. Andreas Hauer",
+    title: "Steuerberater",
+    telefon: "07242/35388 DW 37",
+    email: "hauer@maerzinger.at",
+    avatar: {
+      src: HauerImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Isabella Krifka",
+    title: "Buchhaltung, Sekretariat",
+    telefon: "07242/35388 DW 19",
+    email: "krifka@maerzinger.at",
+    avatar: {
+      src: KrifkaImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Eva-Maria Märzinger",
+    title: "Leitung Lohnverrechnung",
+    telefon: "07242/35388 DW 13",
+    email: "e.maerzinger@maerzinger.at",
+    avatar: {
+      src: MMaerzingerImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Iris Schachinger",
+    title: "Bilanzbuchhaltung",
+    telefon: "07242/35388 DW 22",
+    email: "schachinger@maerzinger.at",
+    avatar: {
+      src: SchachingerImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Ingrid Klausmayer",
+    title: "Buchhaltung",
+    telefon: "07242/35388 DW 17",
+    email: "klausmayer@maerzinger.at",
+    avatar: {
+      src: KlausmayerImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Stephanie Hahn",
+    title: "Dipl. Steuersachbearbeiter",
+    telefon: "",
+    email: "hahn@maerzinger.at",
+    avatar: {
+      src: HahnImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Christine Kinberger",
+    title: "Buchhaltung",
+    telefon: "07242/35388 DW 18",
+    email: "kinberger@maerzinger.at",
+    avatar: {
+      src: KinbergerImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Katharina Stipic",
+    title: "Sekretariat",
+    telefon: "07242/35388 DW 10",
+    email: "stipic@maerzinger.at",
+    avatar: {
+      src: StipicImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Karin Manhartsgruber",
+    title: "Lohnverrechnung",
+    telefon: "07242/35388 DW 38",
+    email: "manhartsgruber@maerzinger.at",
+    avatar: {
+      src: ManhartsgruberImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Amanda Marinkovic",
+    title: "Buchhaltung",
+    telefon: "07242/35388 DW 16",
+    email: "marinkovic@maerzinger.at",
+    avatar: {
+      src: MarinkovicImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Stefan Schmidt",
+    title: "Buchhaltung",
+    telefon: "07242/35388 DW 30",
+    email: "schmidt@maerzinger.at",
+    avatar: {
+      src: SchmidtImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Graf Karina",
+    title: "Buchhaltung",
+    telefon: "07242/35388 DW 31",
+    email: "graf@maerzinger.at",
+    avatar: {
+      src: KarinaImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Kymete Maliqi",
+    title: "Berufsanwärter",
+    telefon: "07242/35388 DW 34",
+    email: "maliqi@maerzinger.at",
+    avatar: {
+      src: MaliqiImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Elvan Bodur",
+    title: "Buchhaltung",
+    telefon: "07242/35388 DW 16",
+    email: "bodur@maerzinger.at",
+    avatar: {
+      src: BodurImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Melanie Hauser",
+    title: "Berufsanwärterin",
+    telefon: "07242/35388 DW 35",
+    email: "hauser@maerzinger.at",
+    avatar: {
+      src: HauserImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Winitzky Hannah",
+    title: "Lohnverrechnung",
+    telefon: "07242/35388 DW 32",
+    email: "winitzky@maerzinger.at",
+    avatar: {
+      src: HannahImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Mag. Martina-Monique Wirnsberger",
+    title: "Steuersachbearbeiter",
+    telefon: "07242/35388 DW 25",
+    email: "wirnsberger@maerzinger.at",
+    avatar: {
+      src: PlaceholderImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Derya Uygun",
+    title: "Buchhaltung",
+    telefon: "07242/35388 DW 26",
+    email: "uygun@maerzinger.at",
+    avatar: {
+      src: PlaceholderImage,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Klicic Aleksandra",
+    title: "Buchhaltung",
+    telefon: "07242/35388 DW 14",
+    email: "klicic@maerzinger.at",
+    avatar: {
+      src: PlaceholderImage,
+      width: 480,
+      height: 560,
+    },
+  },
+];
+
+---
+
+<Layout title="About">
+  <Sectionhead>
+    <Fragment slot="title">Team</Fragment>
+    <Fragment slot="desc">Unser hochmotiviertes Team ist immer gerne für Sie da!</Fragment>
+  </Sectionhead>
+  <Container>
+    <div class="grid md:grid-cols-2 gap-12 mx-auto mt-12">
+      {
+        team.map((item) => (
+        <div href="#" class="flex flex-col items-center bg-white border rounded-lg shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            
+            <Image
+                {...item.avatar}
+                format="avif"
+                alt="Team"
+                class="w-full rounded-t-lg h-96 md:h-40 md:w-auto md:rounded-none md:rounded-l-lg"
+              />
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{item.name}</h5>
+                {item.title.length ?  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.title}</p> : ""}  
+                {item.email.length ?  <div class="flex items-center mt-1 space-x-2 text-gray-600"><Icon class="text-ci-color-2 w-4 h-4" name="uil:envelope" /><span class="mb font-normal text-gray-700 dark:text-gray-400"><a class="text-ci-color-1" href="mailto:{item.email}">{item.email}</a></div></br> : ""}  
+                {item.telefon.length ? <div class="flex items-center mt-1 space-x-2 text-gray-600"><Icon class="text-ci-color-2 w-4 h-4" name="uil:phone" /><span class="mb font-normal text-gray-700 dark:text-gray-400">{item.telefon}</span></div> : ""}  
+            </div>
+        </div>
+       
+        ))
+      }
+    </div>
+  </Container>
+</Layout>

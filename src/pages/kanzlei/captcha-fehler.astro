@@ -1,0 +1,42 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
+
+---
+
+<Layout title="Fehler">
+  <Sectionhead>
+    <Fragment slot="title">Fehler</Fragment>
+    <Fragment slot="desc"
+      >Mag. Martina Märzinger Wirtschaftstreuhand - Steuerberatung GmbH</Fragment
+    >
+  </Sectionhead>
+  
+  <Container>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 min-h-500">
+            
+      <h3 class="text-xl mb-0 text-center tracking-normal font-bold text-ci-color-1 leading-normal min-h-500">Captcha-Validierung fehlgeschlagen.</h3>
+
+      <p class="leading-relaxed text-center">
+        E: <a href="mailto:kanzlei@maerzinger.at">kanzlei@maerzinger.at</a>
+      </p>
+      <p class="leading-relaxed text-center">
+        T: <a href="tel:0043724235388">+43 - 7242 353 88</a>
+      </p>
+
+      <div class="mt-20 flex-col sm:flex-row gap-3 text-center">
+        <Link href="/"  class="" style="primary" size="md" rel="noopener">Startseite</Link>
+        <Link href="/kontakt" class="" style="primary" size="md" rel="noopener">Kontakt</Link>
+        <Link href="/kontaktformular" class="" style="primary" size="md" rel="noopener">Zurück</Link>
+      </div>
+
+      
+     
+
+    </div>
+    <p></p>
+   
+  </Container>
+</Layout>

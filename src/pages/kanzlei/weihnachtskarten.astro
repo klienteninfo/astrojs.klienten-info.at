@@ -1,0 +1,198 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+import { Image } from "@astrojs/image/components";
+
+import I_2023_1 from "@assets/karten/weihnacht_2023-1.jpg";
+import I_2023_2 from "@assets/karten/weihnacht_2023-2.jpg";
+
+import I_2022_1 from "@assets/karten/2022-1.jpg";
+import I_2022_2 from "@assets/karten/2022-2.jpg";
+
+import I_2021_1 from "@assets/karten/2021.jpg";
+import I_2021_2 from "@assets/karten/2021_back.jpg";
+
+import I_2020_1 from "@assets/karten/2020-1.jpg";
+import I_2020_2 from "@assets/karten/2020-2.jpg";
+
+import I_2018_1 from "@assets/karten/2018.jpg";
+
+import I_2017_1 from "@assets/karten/2017.jpg";
+
+import I_2015_1 from "@assets/karten/2015_1200.jpg";
+import I_2015_2 from "@assets/karten/2015_1200_back.jpg";
+
+import I_2014_1 from "@assets/karten/2014_1200.jpg";
+
+import I_2013_1 from "@assets/karten/2013_1200.jpg";
+
+import I_2012_1 from "@assets/karten/2012_1200.jpg";
+
+import I_2011_1 from "@assets/karten/2011.jpg";
+
+import I_2010_1 from "@assets/karten/2010.jpg";
+
+import I_2009_1 from "@assets/karten/2009-09_1000px.jpg";
+---
+
+<Layout title="Weihnachtskarte">
+  <Sectionhead>
+    <Fragment slot="title">Weihnachtskarte</Fragment>
+    <Fragment slot="desc"></Fragment>
+  </Sectionhead>
+
+  <Container>
+    
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-center text-3xl text-gray-800">
+        Alle Jahre wieder...
+      </h2>
+      <h3 class="text-center mb-5">wünschen wir ein frohes Weihnachtsfest und ein erfolgreiches Jahr 2023</h3>
+
+      <div class="grid grid-cols-2 gap-2 m-auto max-w-xl place-content-center">
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2023_1.src}>
+            <Image src={I_2023_1} format="avif" alt="Team" class="m-auto max-h-36" loading="none" />
+          </a> 
+        </div>
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2023_2.src}>
+            <Image src={I_2023_2} format="avif" alt="Team" class="m-auto max-h-36" loading="none" />
+          </a>
+        </div>
+      </div>
+
+      <h2 class="font-bold text-center text-2xl mt-5 text-gray-800">
+        Weihnachtsgrüße aus den Jahren 2010 - 2022.
+      </h2>
+
+      <div class="grid grid-cols-2 gap-4 m-auto max-w-xl place-content-center">
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2022_1.src}>
+            <Image src={I_2022_1} format="avif" alt="Team" class="m-auto max-h-36 w-auto" loading="none"  />
+          </a> 
+        </div>
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2022_2.src}>
+            <Image src={I_2022_2} format="avif" alt="Team" class="m-auto max-h-36 w-auto" loading="none" />
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 m-auto max-w-xl place-content-center">
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2021_1.src}>
+            <Image src={I_2021_1} format="avif" alt="Team" class="m-auto max-h-36" loading="none" />
+          </a> 
+        </div>
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2021_2.src}>
+            <Image src={I_2021_2} format="avif" alt="Team" class="m-auto max-h-36" loading="none" />
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 m-auto max-w-xl place-content-center">
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2020_1.src}>
+            <Image src={I_2020_1} format="avif" alt="Team" class="m-auto max-h-36" loading="lazy" />
+          </a> 
+        </div>
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2020_2.src}>
+            <Image src={I_2020_2} format="avif" alt="Team" class="m-auto max-h-36" loading="lazy" />
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 m-auto max-w-xl place-content-center">
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2018_1.src}>
+            <Image src={I_2018_1} format="avif" alt="Team" class="max-h-36 w-auto" loading="lazy" />
+          </a> 
+        </div>
+       
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 m-auto max-w-xl place-content-center">
+        <div class="">
+          <a data-fslightbox="first-lightbox" href={I_2017_1.src}>
+            <Image src={I_2017_1} format="avif" alt="Team" class="max-h-36 w-auto" loading="lazy" />
+          </a> 
+        </div>
+       
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 m-auto max-w-xl place-content-center">
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2015_1.src}>
+            <Image src={I_2015_1} format="avif" alt="Team" class="m-auto max-h-42" loading="lazy" />
+          </a> 
+        </div>
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2015_2.src}>
+            <Image src={I_2015_2} format="avif" alt="Team" class="m-auto max-h-42" loading="lazy" />
+          </a>
+        </div>
+      </div>
+
+
+      <div class="grid grid-cols-1 gap-4 m-auto max-w-xl place-content-center">
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2014_1.src}>
+            <Image src={I_2014_1} format="avif" alt="Team" class="max-h-36 w-auto" loading="lazy" />
+          </a> 
+        </div>
+       
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 m-auto max-w-xl place-content-center">
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2013_1.src}>
+            <Image src={I_2013_1} format="avif" alt="Team" class="max-h-36 w-auto" loading="lazy" />
+          </a> 
+        </div>
+       
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 m-auto max-w-xl place-content-center">
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2012_1.src}>
+            <Image src={I_2012_1} format="avif" alt="Team" class="max-h-36 w-auto" loading="lazy" />
+          </a> 
+        </div>
+       
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 m-auto max-w-xl place-content-center">
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2011_1.src}>
+            <Image src={I_2011_1} format="avif" alt="Team" class="max-h-36 w-auto" loading="lazy" />
+          </a> 
+        </div>
+       
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 m-auto max-w-xl place-content-center">
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2010_1.src}>
+            <Image src={I_2010_1} format="avif" alt="Team" class="max-h-36 w-auto" loading="lazy" />
+          </a> 
+        </div>
+       
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 m-auto max-w-xl place-content-center">
+        <div>
+          <a data-fslightbox="first-lightbox" href={I_2009_1.src}>
+            <Image src={I_2009_1} format="avif" alt="Team" class="max-h-36 w-auto" loading="lazy" />
+          </a> 
+        </div>
+       
+      </div>
+
+  </Container>
+</Layout>

@@ -1,0 +1,37 @@
+---
+import Container from "@components/container.astro";
+import { getFormattedDate } from "@utils/all";
+import { log } from "astro/dist/core/logger/core";
+import Layout from "./Layout.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <Sectionhead>
+    <Fragment slot="title">{frontmatter.title}</Fragment>
+    <Fragment slot="desc"></Fragment>
+  </Sectionhead>
+  <Container>
+    <div class="mx-auto max-w-[735px] mt-14">
+     
+      <h1
+        class="text-2xl text-ci-color-1 lg:text-3xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+        {frontmatter.title}
+      </h1>
+      
+    </div>
+
+    <div class="leading-6 mx-auto max-w-[735px] prose mt-6">
+      <slot />
+    </div>
+    <div class="text-center mt-8">
+      <a
+        href="/leistugnen"
+        class="bg-ci-color-1 px-5 py-3 text-white rounded-md hover:bg-ci-color-2 transition"
+        >← Zurück zu Leistungen</a
+      >
+    </div>
+  </Container>
+</Layout>

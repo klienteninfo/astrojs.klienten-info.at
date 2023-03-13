@@ -1,0 +1,28 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+---
+
+<Layout title="Ärzte-Info">
+  <Sectionhead>
+    <Fragment slot="title">Ärzte-Info</Fragment>
+    <Fragment slot="desc"></Fragment>
+  </Sectionhead>
+
+  <Container>
+    <div class="mt-10">
+    <script type="text/javascript">
+      var kicat=16,art_cat_id=6,rcat="",ki_ts_id=1,related="";
+      function createXHR(){var t=!1;try{t=new ActiveXObject("Msxml2.XMLHTTP")}catch(a){try{t=new ActiveXObject("Microsoft.XMLHTTP")}catch(a){try{t=new XMLHttpRequest}catch(a){t=!1}}}return t}function loadHTML(t,a,i,e){var c=createXHR();c.onreadystatechange=function(){4==c.readyState&&(i.innerHTML=c.responseText,a(i,e))},c.open("GET",t,!0),c.send(null)}function processHTML(t,a){a.innerHTML=t.innerHTML;a.innerHTML="";}function loadki(t){var a=document.getElementById("ki_storage");loadHTML(t,processHTML,document.getElementById("ki_display_content"),a)}""==window.location.search&&("1"==kicat||"2"==kicat||"3"==kicat||"4"==kicat||"5"==kicat||"6"==kicat||"11"==kicat||"12"==kicat||"21"==kicat||"41"==kicat||"42"==kicat||"80"==kicat?window.history.pushState("",document.pageTitle,window.location.pathname+"?kicat="+kicat+"&navcat="+kicat+"&"):"9"==kicat?window.history.pushState("",document.pageTitle,window.location.pathname+"?rcat="+rcat+"&kicat="+kicat+"&navcat="+kicat+"&"):"16"==kicat&&0!==art_cat_id?window.history.pushState("",document.pageTitle,window.location.pathname+"?kicat="+kicat+"&art_cat_id="+art_cat_id+"&"):"16"==kicat&&""!==related?window.history.pushState("",document.pageTitle,window.location.pathname+"?kicat="+kicat+"&related="+related+"&"):"23"==kicat&&""!==ki_ts_id?window.history.pushState("",document.pageTitle,window.location.pathname+"?kicat="+kicat+"&ki_ts_id="+ki_ts_id+"&"):window.history.pushState("",document.pageTitle,window.location.pathname+"?kicat="+kicat+"&art_cat_id="+art_cat_id+"&rcat="+rcat+"&ki_ts_id="+ki_ts_id+"&related="+related+"&"));var KIURL="https://www.klienten-info.at/523_4/klienten-info.php";if(""!=window.location.search&&-1==window.location.search.indexOf("_vl_backlink")){var a=window.location.search.replace("url=&","");a=(a=(a=a.replace(/%3A/g,":")).replace(/%2F/g,"/")).replace(/%3F/g,"?"),KIURL+=a}window.addEventListener("DOMContentLoaded",function(){loadki(KIURL)});
+      </script>
+    
+      <div id="ki_storage" style="display:none;"></div>
+      <div id="ki_display_content"></div>
+      
+      <script type="text/javascript">
+      var eingSvArtSelector=document.querySelectorAll("[id='eingSvArt']");function changeCalculationMode(e){var l=document.querySelectorAll("[id='div_endg']"),d=document.querySelectorAll("[id='div_vorl']");"1"==e[e.selectedIndex].value?(l[0].style.display="none",d[0].style.display="block"):(l[0].style.display="block",d[0].style.display="none")}function ergebnis_change(){var e=document.querySelectorAll("[id='ergebnis']"),l=document.querySelectorAll("[id='rate']"),d=document.querySelectorAll("[id='dauer']"),t=document.querySelectorAll("[id='sparziel']");"rate"==e[0][e[0].selectedIndex].value?(l[0].disabled=!0,d[0].disabled=!0,t[0].disabled=!0):"dauer"==e[0][e[0].selectedIndex].value?(l[0].disabled=!1,d[0].disabled=!0,t[0].disabled=!1):"sparziel"==e[0][e[0].selectedIndex].value&&(l[0].disabled=!1,d[0].disabled=!1,t[0].disabled=!0)}function ergebnis2_change(){var e=document.querySelectorAll("[id='ergebnis2']"),l=document.querySelectorAll("[id='rate2']"),d=document.querySelectorAll("[id='dauer2']");"rate"==e[0][e[0].selectedIndex].value?(l[0].disabled=!0,d[0].disabled=!1):"dauer"==e[0][e[0].selectedIndex].value&&(l[0].disabled=!1,d[0].disabled=!0)}function konfess_change(e){var l=document.querySelectorAll("[id='konfess']"),d=document.querySelectorAll("[id='konfess2']"),t=document.querySelectorAll("[id='Evangelisch']"),c=document.querySelectorAll("[id='Katholisch']");"kat"==l[0].value?(t[0].style.display="none",c[0].style.display="block",l[0].selectedIndex=0,d[0].selectedIndex=1):(c[0].style.display="none",t[0].style.display="block",l[0].selectedIndex=0,d[0].selectedIndex=1)}function makeChoice(){for(var e=0,l=document.querySelectorAll("[name='berechnungsart']"),d=0;d<l.length;d++)if(1==l[d].checked){e=l[d].value;var t=document.querySelectorAll("[id='Kreditbetrag']"),c=document.querySelectorAll("[id='Laufzeit']"),a=document.querySelectorAll("[id='Rate']"),i=document.querySelectorAll("[id='Zinssatz']");"1"==e&&(t[0].disabled=!1,c[0].disabled=!1,a[0].disabled=!0,t[0].focus()),"2"==e&&(t[0].disabled=!1,c[0].disabled=!0,a[0].disabled=!1,t[0].focus()),"3"==e&&(t[0].disabled=!0,c[0].disabled=!1,a[0].disabled=!1,i[0].focus())}}
+      </script>
+    </div>
+  </Container>
+</Layout>

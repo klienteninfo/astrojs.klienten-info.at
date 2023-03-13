@@ -1,0 +1,31 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
+
+---
+
+<Layout title="Danke">
+  <Sectionhead>
+    <Fragment slot="title">Danke</Fragment>
+    <Fragment slot="desc"
+      >Mag. Martina Märzinger Wirtschaftstreuhand - Steuerberatung GmbH</Fragment
+    >
+  </Sectionhead>
+  
+  <Container>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 min-h-500">
+            
+      <h3 class="text-xl mb-0 text-center tracking-normal font-bold text-ci-color-1 leading-normal min-h-500">Danke für die Anfrage. Wir melden uns zeitnah bei Ihnen.</h3>
+
+      <div class="mt-20 flex-col sm:flex-row gap-3 text-center">
+        <Link href="/" target="_blank" class="" style="primary" size="md" rel="noopener">Startseite</Link>
+        <Link href="/kontakt" target="_blank" class="" style="primary" size="md" rel="noopener">Kontakt</Link>
+      </div>
+     
+
+    </div>
+   
+  </Container>
+</Layout>

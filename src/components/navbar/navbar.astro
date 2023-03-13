@@ -7,30 +7,49 @@ import Logo from "assets/logo.png";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
-  {
-    title: "Features",
+{
+    title: "Kanzlei",
     path: "#",
     children: [
-      { title: "Action", path: "#" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
+      { title: "Über uns", path: "/kanzlei/ueber-uns" },
+      { title: "Team", path: "/kanzlei/team" },
+      { title: "Kooperationpartner", path: "/kanzlei/partner" },
+      { title: "Weihnachtskarten", path: "/kanzlei/weihnachtskarten" },
+      
     ],
   },
   {
-    title: "Pricing",
-    path: "/pricing",
+    title: "Liestungen",
+    path: "/leistungen",
   },
   {
-    title: "About",
-    path: "/about",
+    title: "Karriere",
+    path: "/karriere",
+  }, 
+  {
+    title: "Services",
+    path: "#",
+    children: [
+      { title: "Info-Corner", path: "/services/info-corner" },
+      { title: "Finanzämter", path: "/services/finanzaemter" },
+      { title: "Formulare", path: "/services/formulare" },
+      { title: "Links", path: "/services/links" },
+      { title: "Steuerrechner", path: "/services/steuerrechner" },
+      { title: "Newsletter-Anmeldung", path: "/services/newsletter" },
+      { title: "Themen-Index", path: "/services/themen-index" },
+    ],
   },
   {
-    title: "Blog",
-    path: "/blog",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
+    title: "Aktuelles",
+    path: "#",
+    children: [
+      { title: "Klienten-Info", path: "/aktuelles/klienten-info" },
+      { title: "Management-Info", path: "/aktuelles/management-info" },
+      { title: "Ärzte-Info", path: "/aktuelles/aerzte-info" },
+      { title: "Vermieter-Info", path: "/aktuelles/vermieter-info" },
+      { title: "Gastronomie-Info", path: "/aktuelles/gastronomie-info" },
+      { title: "Landwirte-Info", path: "/aktuelles/landwirte-info" },
+    ],
   },
 ];
 ---
