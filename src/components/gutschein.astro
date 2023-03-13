@@ -1,0 +1,28 @@
+---
+import { Picture } from "@astrojs/image/components";
+import Link from "@components/ui/link.astro";
+import GutscheinImage from "assets/gutschein.png";
+---
+
+<div class="bg-ci-color-1 border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <div class="p-5">
+        <a href="href=https://www.niemals-ohne.at/" target="_blank">
+            <Picture
+                src={GutscheinImage}
+                alt="Gutschein"
+                widths={[80, 100, 120]}
+                sizes="(max-width: 120px) 100vw, 120px"
+                loading="eager"
+                format="avif"
+             />
+          
+        </a>
+        <a href="href=https://www.niemals-ohne.at/" target="_blank">
+            <h5 class="mb-2 mt-2 text-2xl font-bold tracking-tight text-white dark:text-white">Gutschein</h5>
+        </a>
+        <p class="mb-4 font-normal text-white dark:text-gray-400">
+            200 Euro Gutschein auf den ersten Jahresabschluss für alle Neu-Gründer.
+        </p>
+        
+        <Link href="https://www.niemals-ohne.at/" target="_blank" class="" style="secondary" size="md" rel="noopener">niemals-ohne.at</Link>
+</div>

@@ -1,0 +1,26 @@
+---
+const jobs = (await Astro.glob("../pages/karriere/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.publishDate).valueOf() -
+    new Date(a.frontmatter.publishDate).valueOf()
+);
+
+---
+
+<div class="w-full  p-4 mb-5 bg-white border rounded-lg shadow-md sm:p-6 dark:bg-gray-800 dark:border-gray-700">
+    <h5 class="mb-3 text-base font-semibold text-ci-color-2 md:text-2xl dark:text-white">
+      Starten Sie Ihre Karriere bei uns
+    </h5>
+    <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Wir suchen engagierte und zuverlässige Mitarbeiter:innen, die spannende und abwechslungsreiche Aufgaben schätzen und als Teamplayer unsere Klienten bestmöglich betreuen.</p>
+    <ul class="my-4 space-y-3">
+    {
+      jobs.map((job, index) => (
+      <li>
+            <a href={job.url} class="flex items-center p-2 text-base border border-ci-color-2  text-ci-color-2 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                <span class="flex-1 ml-2">{job.frontmatter.title} -  {job.frontmatter.time}</span>
+            </a>
+     </li>
+      ))
+    }
+    </ul>
+</div>

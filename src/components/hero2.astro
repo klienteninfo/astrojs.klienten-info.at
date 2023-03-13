@@ -1,32 +1,40 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import heroImage from "assets/hero.png";
 import Link from "@components/ui/link.astro";
+import Gutschein from "@components/gutschein.astro";
+import Joblist from "@components/joblist.astro";
 import { Icon } from "astro-icon";
 ---
 
 <main
   class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
   <div class="py-6 md:order-1 hidden md:block">
-    <Picture
-      src={heroImage}
-      alt="Astronaut in the air"
-      widths={[200, 400, 600]}
-      aspectRatio="4:3"
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      format="avif"
-    />
+    <Gutschein />
+    <wbr />
+    <wbr />
+    <Joblist />
   </div>
   <div>
     <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
+      class="text-3xl lg:text-4xl xl:text-5xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Das Team der Kanzlei Märzinger<wbr />heißt sie willkommen!
     </h1>
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly create
-      any website with this starter.
+    <wbr />
+    <h2
+      class="text-xl lg:text-2xl xl:text-3xl font-normal lg:tracking-tight xl:tracking-tighter">
+      Ihr Wohl steht für uns an erster Stelle.
+    </h2>
+    <wbr />
+    <p class="text-lg text-slate-600 max-w-xl">
+      Die Abwicklung unserer Standardaufgaben, wie Buchhaltung, Lohnverrechnung, Jahresabschlüsse und Erstellung der Steuererklärungen sehen wir als Selbstverständlichkeit. Alle darüber hinausgehenden Aufgaben als Herausforderung, die wir gemeinsam mit Ihnen bestmöglich gestalten und abwickeln wollen. 
+    </p>
+    <wbr />
+    <h2
+      class="text-xl lg:text-2xl xl:text-3xl font-normal lg:tracking-tight xl:tracking-tighter">
+      Wir betreuen Sie mit großer Freude effizient, schnell und zuverlässig.
+    </h2>
+    <wbr />
+    <p class="text-lg text-slate-600 max-w-xl">
+      Fachkenntnis auf höchstem Niveau, langjährige Erfahrung und Einfühlungsvermögen im partnerschaftlichen Zusammenwirken mit Ihnen betrachten wir als unsere größte Stärke. 
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
