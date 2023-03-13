@@ -22,15 +22,14 @@ console.log(posts[0].frontmatter.image);
   <Container>
     
     <main class="mt-16">
-      <ul class="grid md:grid-cols-3 gap-16  mx-auto">
+      <ul class="grid md:grid-cols-3 gap-10  mx-auto">
         {
           posts.map((post, index) => (
-          <div class="w-full  p-4 mb-5 bg-white border rounded-lg shadow-md sm:p-6 dark:bg-gray-800 dark:border-gray-700">
-              <a href="#">
+          <div class="w-full p-4 mb-5 bg-white border rounded-lg shadow-md sm:p-6 dark:bg-gray-800 dark:border-gray-700">
+              <a href={post.url}>
                   <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{post.frontmatter.title}</h5>
               </a>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{post.frontmatter.excerpt}</p>
-              <wbr />
+              <p class="mb-5 font-normal text-gray-700 dark:text-gray-400">{post.frontmatter.excerpt}</p>
               <Link href={post.url} class="" style="primary" size="md" rel="noopener">mehr</Link> 
           </div>
            

@@ -1,0 +1,96 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+import { Image } from "@astrojs/image/components";
+import Icon14 from "../assets/karriere/Element_14.png";
+import Icon16 from "../assets/karriere/Element_16.png";
+import Icon17 from "../assets/karriere/Element_17.png";
+import Icon18 from "../assets/karriere/Element_18.png";
+import Icon19 from "../assets/karriere/Element_19.png";
+import Icon20 from "../assets/karriere/Element_20.png";
+
+
+const features = [
+  {
+    title: "familiäre und wertschätzende Atmosphäre",
+    description:
+      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+    avatar: {
+      src: Icon14,
+      
+    },
+  },
+  {
+    title: "gute Work-Life-Balance",
+    description:
+      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+    avatar: {
+      src: Icon16,
+      
+    },
+  },
+  {
+    title: "moderner Arbeitsplatz",
+    description:
+      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+    avatar: {
+      src: Icon17,
+     
+    },
+  },
+  {
+    title: "Aus- und Weiterbildungen",
+    description:
+      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+    avatar: {
+      src: Icon18,
+     
+    },
+  },
+  {
+    title: "Förderung individueller Stärken",
+    description:
+      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+    avatar: {
+      src: Icon19,
+    
+    },
+  },
+  {
+    title: "gemeinsame Aktivitäten",
+    description: "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+    avatar: {
+      src: Icon20,
+     
+    },
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-2xl lg:text-3xl font-bold text-ci-color-1 lg:tracking-tight">
+    Was Sie bei uns erwarten können
+  </h2>
+</div>
+
+<div class="grid rounded-lg sm:grid-cols-2 md:grid-cols-3 mt-5 gap-16  bg-white border  border-ci-color-1 shadow-md items-center px-8 py-8  ">
+  {
+    features.map((item) => (
+      <div class="">
+        <div class="mt-1 p-2 md:h-40 shrink-0 content-center mx-auto  align-middle">
+          <Image
+                {...item.avatar}
+                format="avif"
+                alt="Team"
+                class="h-28 md:w-auto md:rounded-none md:rounded-l-lg items-center mx-auto"
+                loading="lazy"
+              />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg text-center">{item.title}</h3>
+          
+        </div>
+      </div>
+    ))
+  }
+</div>

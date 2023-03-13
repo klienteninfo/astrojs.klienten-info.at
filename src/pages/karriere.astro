@@ -1,0 +1,90 @@
+---
+import { Picture } from "@astrojs/image/components";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Iconsection from "@components/karriere-icon-section.astro";
+import Layout from "@layouts/Layout.astro";
+import Link from "@components/ui/link.astro";
+import { getFormattedDate } from "@utils/all";
+import { log } from "astro/dist/core/logger/core";
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob("./karriere/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.publishDate).valueOf() -
+    new Date(a.frontmatter.publishDate).valueOf()
+);
+console.log(posts[0].frontmatter.image);
+---
+
+<Layout title="Karriere">
+  <Sectionhead>
+    <Fragment slot="title">Karriere</Fragment>
+    <Fragment slot="desc">Starten Sie Ihre Karriere bei uns</Fragment
+    >
+  </Sectionhead>
+  <Container>
+    
+    <main class="mt-16">
+      <a href="#offenestellen" class="text-ci-color-1 mb-3 mt-3 uppercase tracking-wider text-sm font-medium w-fill flex">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+        </svg>
+        <span class="ml-2 truncate" title="Test with a very really long name (resize the browser to see it truncate)">Offene Stellen</span>
+      </a>
+
+      <h2 class="text-2xl lg:text-3xl mb-2 font-bold text-ci-color-1 lg:tracking-tight">
+        Karriere
+      </h2>
+      
+      <p class="text-normal mb-2 leading-relaxed">
+        Wir wissen, dass wir nur gemeinsam mit unserem Team erfolgreich sein können. Das bedeutet für uns ein Arbeitsklima zu schaffen, in dem sich unsere Mitarbeiter:innen wohl fühlen und ihre individuellen Stärken voll entfalten können. Vereinbarkeit von Familie und Beruf, Weiterbildungen und Karriereentwicklungschancen und gemeinsame Aktivitäten sind uns besonders wichtig.
+      </p>  
+      <p class="text-normal mb-2 leading-relaxed">
+        Wir suchen engagierte und zuverlässige Mitarbeiter:innen, die spannende und abwechslungsreiche Aufgaben schätzen und als Teamplayer unsere Klienten bestmöglich betreuen. 
+      </p>
+      <p class="text-normal mb-5 font-bold leading-relaxed">
+        Wenn Sie zu uns passen, dann bewerben Sie sich gleich per E-Mail <a class="text-ci-color-1" href="mailto:stipic@maerzinger.at">stipic@maerzinger.at</a>.</p> 
+      <h2 class="text-2xl lg:text-3xl mt-8 mb-2  font-bold text-ci-color-1 lg:tracking-tight">Über uns</h2>     
+      <p class="text-normal mb-2 leading-relaxed">
+        Wir sind eine renommierte Steuerberatungskanzlei mitten in Wels. Unsere Klienten sind Einzelunternehmen, Freiberufler, Familienunternehmen, Klein- und Mittelbetriebe bis hin zu Großbetrieben sowie Vereine und Stiftungen. Zu internationalen Steuerfragen arbeiten wir mit Berufskollegen aus dem EU-Raum zusammen.
+      </p>
+      <p class="text-normal mb-2 leading-relaxed">
+        Wir sind stolz darauf, dass viele unserer Mitarbeiter:innen schon sehr lange bei uns sind und gemeinsam mit uns gewachsen sind. Wir bieten Ihnen interessante Aufgaben in einem ausgezeichneten Umfeld bei attraktivem Gehalt.      
+      </p> 
+      <p  class="text-normal mb-10 leading-relaxed">
+        <strong>Mag. Martina Märzinger WT-STB GmbH</strong></br>
+WDZ III, Bauernstraße 9, 4600 Wels</br>
+Telefon: 07242/353 88-10</br>
+      </p>
+
+      <Iconsection />
+
+      <div class="mt-16 md:mt-12 md:mb-6" id="offenestellen">
+        <h2 class="text-2xl lg:text-3xl font-bold text-ci-color-1 lg:tracking-tight">
+          Offene Stellen
+        </h2>
+      </div>
+
+        <ul class="grid md:grid-cols-2 gap-10  mx-auto">
+        {
+          posts.map((post, index) => (
+          <div class="max-w-m p-6 bg-white border  border-ci-color-1 rounded-lg shadow-md">
+              <a href="#">
+                  <h5 class="mb-0 text-2xl font-bold tracking-tight text-gray-900">{post.frontmatter.title}</h5>
+              </a>
+              <h6 class="mb-3 text font-bold tracking-tight text-gray-600">{post.frontmatter.time}</h6>
+
+              <p class="mb-6 font-normal text-gray-700 dark:text-gray-400">{post.frontmatter.excerpt}</p>
+              <Link href={post.url} target="_blank" class="" style="primary" size="md" rel="noopener">mehr</Link> 
+              
+          </div>
+           
+          ))
+        }
+      </ul>
+
+
+    </main>
+  </Container>
+</Layout>
