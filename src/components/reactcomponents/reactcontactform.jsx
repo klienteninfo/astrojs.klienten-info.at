@@ -1,4 +1,4 @@
-import { useState,useEffect,useRef } from "react"; 
+import { useState } from "react"; 
 import { useForm } from "react-hook-form"; 
 import { yupResolver } from "@hookform/resolvers/yup"; 
 import * as yup from "yup"; 
@@ -20,11 +20,8 @@ const ReactForm = () => {
     }); 
 
     const onVerifyCaptcha = (token) => {
-        //console.log("Verified: " + token);
         setVarified(token);
     };
-
-
 
     const onSubmit = (data) => {
         let emailcontent = 
