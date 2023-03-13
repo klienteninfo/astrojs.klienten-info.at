@@ -1,12 +1,14 @@
 ---
 import heroImage from "assets/hero.jpg";
+import { Picture } from "@astrojs/image/components";
 ---
-<div class="w-full hero-section bg-hero-pattern"></div>
-
-<style>
-  .hero-section { 
-      background-size: cover;
-      height: 568px;
-      background-position: center;
-  }
-</style>
+<div class="w-full hero-section bg-hero-pattern">
+    <Picture
+      src={heroImage}
+      alt="Astronaut in the air"
+      widths={[200, 400, 1920]}
+      sizes="(max-width: 800px) 100vw, 1920"
+      loading="eager"
+      format="avif"
+    />
+</div>
