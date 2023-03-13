@@ -1,0 +1,20 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import ReactForm from "@components/reactcomponents/reactcontactform";
+---
+<Layout title="Contact">
+  <Sectionhead>
+    <Fragment slot="title">Kontakt</Fragment>
+    <Fragment slot="desc">Kontaktieren Sie uns</Fragment>
+  </Sectionhead>
+  
+  <Container>
+    <div class="grid mx-auto max-w-4xl mt-16">
+      <ReactForm client:load />
+     </div> 
+    </Container>
+</Layout>
+
+<script is:inline src="//smtpwebrelay.mayetsoft.fr/lib"></script>

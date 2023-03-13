@@ -1,0 +1,56 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
+---
+
+<Layout title="Kontakt">
+  <Sectionhead>
+    <Fragment slot="title">Kontakt</Fragment>
+    <Fragment slot="desc">Kontaktieren Sie uns</Fragment>
+  </Sectionhead>
+  
+  <Container>
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-gray-800">Mag. Martina Märzinger
+          Wirtschaftstreuhand - Steuerberatung GmbH
+          </h2>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+            <span>Bauernstraße 9, A-4600 Wels</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
+              href="mailto:kanzlei@maerzinger.at"
+              >kanzlei@maerzinger.at</a
+            >
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
+              href="tel:+43724235388">+43 - 7242 353 88</a
+            >
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:parcel" />&nbsp;&nbsp;+43 - 7242 353 88
+          </div>
+
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <Link href="/kontaktformular" class="" style="primary" size="md" rel="noopener">Kontaktformular</Link>
+            <Link href="/gutscheinformular"  class="" style="primary" size="md" rel="noopener">Gutschein</Link>
+          </div>
+
+        </div>
+      </div>
+      <div>
+        <iframe width="100%" height="392" src="https://www.openstreetmap.org/export/embed.html?bbox=13.953323364257814%2C48.12634074841738%2C14.066619873046877%2C48.17741903386739&amp;layer=mapnik&amp;marker=48.15188624647707%2C14.009971618652344" style="border: 1px solid black"></iframe> 
+      </div>
+    </div>
+    </Container>
+</Layout>
