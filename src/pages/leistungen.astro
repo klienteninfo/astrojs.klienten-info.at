@@ -1,0 +1,42 @@
+---
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import Link from "@components/ui/link.astro";
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob("./leistungen/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.publishDate).valueOf() -
+    new Date(a.frontmatter.publishDate).valueOf()
+);
+console.log(posts[0].frontmatter.image);
+---
+
+<Layout title="Leistungen">
+  <Sectionhead>
+    <Fragment slot="title">Leistungen</Fragment>
+    <Fragment slot="desc"></Fragment
+    >
+  </Sectionhead>
+  <Container>
+    
+    <main class="mt-16">
+      <ul class="grid md:grid-cols-3 gap-16  mx-auto">
+        {
+          posts.map((post, index) => (
+          <div class="w-full  p-4 mb-5 bg-white border rounded-lg shadow-md sm:p-6 dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{post.frontmatter.title}</h5>
+              </a>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{post.frontmatter.excerpt}</p>
+              <wbr />
+              <Link href={post.url} class="" style="primary" size="md" rel="noopener">mehr</Link> 
+          </div>
+           
+          ))
+        }
+      </ul>
+    </main>
+  </Container>
+</Layout>
