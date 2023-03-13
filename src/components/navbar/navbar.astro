@@ -3,6 +3,7 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Picture } from "@astrojs/image/components";
+import { Image } from '@astrojs/image/components';
 import Logo from "assets/logo.png";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
@@ -59,14 +60,7 @@ const menuitems = [
           <Astronav>
             <div class="flex w-full lg:w-auto items-center justify-between">
               <a href="/" class="text-lg">
-                <Picture
-                src={Logo}
-                alt="Astronaut in the air"
-                widths={[200, 400, 320]}
-                sizes="(max-width: 800px) 100vw, 320px"
-                loading="eager"
-                format="avif"
-              />
+                <Image src={Logo} width={320} height={35} format="avif" alt="Maerzinger"/>
               </a>
               <div class="block lg:hidden">
                 <MenuIcon class="w-4 h-4 text-gray-800" />
